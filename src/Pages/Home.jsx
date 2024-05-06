@@ -1,5 +1,6 @@
 import Card from "./Card";
 import "../Stylesheets/home.css"
+import Footer from "./Footer";
 
 const Home = () => {
     return (
@@ -62,6 +63,7 @@ const Home = () => {
                     />
 
                 </div>
+                <Footer />
             </div>
         </>
     )

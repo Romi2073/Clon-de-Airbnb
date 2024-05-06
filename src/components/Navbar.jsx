@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const Navbar = () => {
+
     return (
 
         <nav>
@@ -19,14 +21,17 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-end items-center pr-15 gap-8">
-                    <NavLink className="text-sm font-medium" to={'/YourHome'}>Airbnb Your Home</NavLink>
-                    <span className="material-symbols-outlined">language</span>
-                    <div className="flex justify-evenly items-center py-1.25 pr-1.25 pl-3 gap-2 rounded-full shadow-md h-10 w-20 border">
+                <div className="flex justify-end items-center pr-4 sm:pr-8 md:pr-12 gap-4 sm:gap-8">
+                    <NavLink className="text-sm font-medium hidden sm:inline-block" to={'/YourHome'}>Airbnb Your Home</NavLink>
+                    <span className="material-symbols-outlined hidden sm:inline-block">language</span>
+                    <div className="flex justify-evenly items-center py-1.25 pr-1.25 pl-3 gap-2 rounded-full shadow-md h-10 w-16 sm:w-20 border">
                         <i className="fa-solid fa-bars"></i>
-                        <p className="bg-black text-white rounded-full w-7 h-7 text-center pt-1.5 text-[10px] font-semibold">E</p>
+                        <NavLink className="bg-gray text-gray rounded-full w-7 h-7 text-center pt-0.5 text-[10px] font-semibold" to={'/Form'}>
+                            <AccountCircleIcon />
+                        </NavLink>
                     </div>
                 </div>
+
             </div>
 
             <div className="h-24 w-screen flex items-center space-x-5 fixed top-20 bg-white">
@@ -56,10 +61,6 @@ const Navbar = () => {
                         <p className="category-text">Farms</p>
                     </div>
                     <div className="category">
-                        <img src="static/type7.jpeg" className="hotel-img" alt="Type 7" />
-                        <p className="category-text">Amazing views</p>
-                    </div>
-                    <div className="category">
                         <img src="static/type8.jpeg" className="hotel-img" alt="Type 8" />
                         <p className="category-text">Rooms</p>
                     </div>
@@ -86,17 +87,6 @@ const Navbar = () => {
                     <p className="text-xs font-medium pr-2">Filters</p>
                 </div>
             </div>
-
-
-            <section className="flex justify-center w-screen mt-48">
-                <div className="flex items-center justify-between rounded-xl p-4 border w-[600px] h-16">
-                    <div className="w-[460px] flex justify-start">
-                        <p className="border-r-2 border-gray-100 pr-4 text-base font-medium">Display total price</p>
-                        <p className="border-gray-100 text-base text-gray-400 pl-4">Includes all fees, before taxes</p>
-                    </div>
-                    <span className="material-symbols-outlined">toggle_on</span>
-                </div>
-            </section>
 
         </nav>
 

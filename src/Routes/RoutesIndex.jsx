@@ -1,15 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
-import Banner from '../Pages/Banner';
 import Home from '../Pages/Home';
 import YourHome from '../Pages/YourHome';
+import Form from '../Pages/Form';
 
 
 const RoutesIndex = () => {
   return (
     <Routes>
-      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path='/YourHome' element={<YourHome/>}/>
-      <Route path="/Home" element={<Banner />} />
+      <Route path='/Form' element={<Form/>}/>
     </Routes>
   );
 }

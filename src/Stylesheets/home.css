@@ -1,6 +1,12 @@
+body{
+  margin-top: 12%;
+  padding: 15px;
+  
+}
+
 .home__section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 5px;
 
 }
