@@ -1,14 +1,17 @@
+import { BrowserRouter } from "react-router-dom"
 import "../src/index.css"
 import './App.css'
 import Navbar from "./components/Navbar"
+import RoutesIndex from "./Routes/RoutesIndex"
 
-import Home from "./components/Home"
 
 export default function App() {
   return (
     <>
-    <Navbar/>
-    <Home/>
+     <BrowserRouter>
+        <Navbar />
+        <RoutesIndex />
+      </BrowserRouter>
     </>
   )
 }

@@ -1,8 +1,10 @@
-import React from 'react';
+import { NavLink } from "react-router-dom";
+
 
 const Navbar = () => {
     return (
-        <>
+
+        <nav>
             <div className="w-screen grid grid-cols-3 h-20 border-b-[1px] items-center fixed top-0 bg-white">
                 <div className="pl-15">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1200px-Airbnb_Logo_B%C3%A9lo.svg.png" className="h-10 w-auto m-2" alt="Airbnb Logo" />
@@ -18,7 +20,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex justify-end items-center pr-15 gap-8">
-                    <p className="text-sm font-medium">Airbnb your home</p>
+                    <NavLink className="text-sm font-medium" to={'/YourHome'}>Airbnb Your Home</NavLink>
                     <span className="material-symbols-outlined">language</span>
                     <div className="flex justify-evenly items-center py-1.25 pr-1.25 pl-3 gap-2 rounded-full shadow-md h-10 w-20 border">
                         <i className="fa-solid fa-bars"></i>
@@ -95,7 +97,9 @@ const Navbar = () => {
                     <span className="material-symbols-outlined">toggle_on</span>
                 </div>
             </section>
-        </>
+
+        </nav>
+
     );
 };
 
